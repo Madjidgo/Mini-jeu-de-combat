@@ -35,6 +35,7 @@ foreach ($donnees as $key => $value)
 
 // setters
 public function setId($id){
+	$id=(int)$id;
 	$this->_id=$id;
 }
 
@@ -43,7 +44,10 @@ public function setNom($nom){
 }
 
 public function setDegats($degats){
-	$this->_degats=$degats;
+	$degats= (int)$degats;
+	if($degats>=1 && $degats<=100){
+		$this->_degats=$degats;
+}
 }
 
 // getters

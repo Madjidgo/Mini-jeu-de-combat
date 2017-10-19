@@ -31,6 +31,19 @@ function chargerClasse($classe)
 }
 
 spl_autoload_register('chargerClasse');
+
+// connect db
+try {
+     $db = new PDO('mysql:host=localhost;dbname=PersonnageManager;charset=utf8', 'phpmyadmin', 'maD24101975');
+ }
+
+ catch (Exception $e)
+
+ {
+
+     die('Erreur : ' . $e->getMessage());
+
+ }
 ?>
         <p>Hello world! This is HTML5 Boilerplate.</p>
 
