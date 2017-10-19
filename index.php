@@ -20,6 +20,18 @@
         <![endif]-->
 
         <!-- Add your site or application content here -->
+<?php
+        // autoload
+function chargerClasse($classe)
+
+{
+
+  require 'classes/'.$classe . '.php'; // On inclut la classe correspondante au paramètre passé.
+
+}
+
+spl_autoload_register('chargerClasse');
+?>
         <p>Hello world! This is HTML5 Boilerplate.</p>
 
         <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
